@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff1493;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+h1 {
+    color: #ff1493;
+    font-size: 3em;
+}
+
+p {
+    color: #333;
+    font-size: 1.2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.animation {
+    font-size: 2em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background-color: #ff1493;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon:nth-child(2) {
+    left: 30%;
+    background-color: #ff69b4;
+    animation-duration: 5s;
+}
+
+.balloon:nth-child(3) {
+    left: 60%;
+    background-color: #ffb6c1;
+    animation-duration: 7s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        display: none;
+    }
+}
